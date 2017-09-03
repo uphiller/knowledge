@@ -15,22 +15,32 @@ n개의 정수로 이루어진 임의의 수열이 주어진다.
 
 ## 소스
 
-    public static void main(String[] args){
-	Scanner sc = new Scanner(System.in);
-	
-	int[] numbers = {10,-4, 3, 1, 5, 6, -35, 12, 21, -1};
-	int[] sum_numbers = new int[10];
-	int temp = 0;
+	import java.util.Scanner;
+	import java.util.stream.IntStream;
 
-	for(int i = 0 ; i < 10 ; i++) {
-	    if(i == 0) temp = 0;
-	    else temp = sum_numbers[i-1] + numbers[i];
-	    sum_numbers[i] = Math.max(temp, numbers[i]);
+	public class Main {
+	    public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int length = Integer.parseInt(sc.nextLine());
+		int[] numbers = new int[length];
+		int[] sum_numbers = new int[length];
+		String[] nums = sc.nextLine().split(" ");
+		for(int i = 0 ; i < length ; i++){
+		    numbers[i] = Integer.parseInt(nums[i]);
+		}
+
+		sum_numbers[0] = numbers[0];
+		int temp = 0;
+		for (int i = 1; i < length; i++) {
+		    temp = sum_numbers[i - 1] + numbers[i];
+		    sum_numbers[i] = Math.max(temp, numbers[i]);
+		}
+
+		IntStream.of(sum_numbers).max().ifPresent(maxInt -> System.out.println(maxInt));
+
+		sc.close();
+	    }
 	}
-	
-	IntStream.of(sum_numbers).max().ifPresent(maxInt -> System.out.println("max=>"+maxInt));
-	
-	sc.close();
 
 
 

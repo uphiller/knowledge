@@ -1,4 +1,4 @@
-## 설치
+## aws ec2 amazon linux에 설치
 
     sudo su
     yum update

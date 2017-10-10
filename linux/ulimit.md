@@ -51,8 +51,8 @@
   - 영구
         
         vim /etc/security/limits.conf 
-        [user id]         soft    nofile          2048 -> soft limit 
-        [user id]         hard    nofile          2048 -> hard limit 
+        [user id]         soft    nofile          10240 -> soft limit 
+        [user id]         hard    nofile          10240 -> hard limit 
 
   
   

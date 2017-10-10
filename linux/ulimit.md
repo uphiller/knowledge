@@ -49,6 +49,7 @@
         ulimit -n 10240 으로 처리량을 늘려줌
         
   - 영구
+        root 계정으로 수행해야 함
         soft 수치가 hard 수치보다 크면 안됨 
         vim /etc/security/limits.conf 
         [user id]         soft    nofile          10240 -> soft limit 

@@ -44,11 +44,11 @@
   nginx 프로세스에서 처리할 수 있는 파일 사이즈가 linux의 기본으로 1024로 설정되어있어서 갑자스럽게 많은 요청을 처리할때 발생할 수 있다
   
   
-  ###  임시
+  - 임시
         
         ulimit -n 10240 으로 처리량을 늘려줌
-  
-  ###  영구
+        
+  - 영구
         
         vim /etc/security/limits.conf 
         [user id]         soft    nofile          2048 -> soft limit 

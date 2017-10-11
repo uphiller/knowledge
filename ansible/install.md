@@ -8,3 +8,7 @@
     cd ansible
     git submodule update --init --recursive
     make install
+
+## pip를 이용한 설치
+
+    pip install ansible

@@ -55,6 +55,11 @@
         vim /etc/security/limits.conf 
         [user id]         soft    nofile          10240 -> soft limit 
         [user id]         hard    nofile          10240 -> hard limit 
+        
+ - 해당 프로세스도 바꿔야함 
+ 
+        prlimit --nofile --output RESOURCE,SOFT,HARD --pid 1234
+        prlimit --nofile=500000 --pid=1234
 
   
   

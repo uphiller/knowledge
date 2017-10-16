@@ -50,3 +50,10 @@
     mysql> START SLAVE;
     mysql> show slave status;
 
+## bin log 정리
+        purge master logs to 'mysql-bin.000186';
+
+## bin log 보관 주기 설정
+        set global expire_logs_days=7;
+        SHOW VARIABLES LIKE '%expire%';
+

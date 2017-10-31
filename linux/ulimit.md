@@ -67,6 +67,7 @@
         prlimit --nofile=500000 --pid=1234
  
  - nginx 옵션 추가
+        
         worker_rlimit_nofile 8192;
   
   
